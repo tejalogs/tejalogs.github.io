@@ -4,34 +4,35 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Teja (tejalogs) — AI Content Strategist & Growth Architect</title>
-<meta name="description" content="Teja pairs strategy with engineering — he doesn't just design the blueprint for digital growth, he builds the engines that execute it. AI Engine Optimisation, agentic workflows, Flutter apps. Founder of The Social Algorithm.">
+<title>Teja (tejalogs) — AI Content Strategist &amp; Growth Architect</title>
+<meta name="description" content="Teja, known online as tejalogs, is an AI Content Strategist & Growth Architect. He pairs strategy with engineering — building the engines that execute digital growth. Founder of The Social Algorithm.">
 <meta name="author" content="Teja">
 <meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#000000">
 
 <link rel="canonical" href="https://tejalogs.github.io/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Teja (tejalogs) — AI Content Strategist & Growth Architect">
-<meta property="og:description" content="Strategy meets engineering. Building the engines that execute digital growth — AEO architecture, agentic workflows, Flutter apps.">
+<meta property="og:title" content="Teja (tejalogs) — AI Content Strategist &amp; Growth Architect">
+<meta property="og:description" content="Strategy paired with engineering. Building the engines that execute digital growth — AEO architecture, agentic workflows, Flutter apps.">
 <meta property="og:url" content="https://tejalogs.github.io/">
 <meta property="og:site_name" content="tejalogs">
-<meta property="og:image" content="https://tejalogs.github.io/og.png">
+<meta property="og:image" content="https://tejalogs.github.io/teja.jpg">
 <meta property="profile:username" content="tejalogs">
 
 <!-- Twitter / X Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@tejalogs">
 <meta name="twitter:creator" content="@tejalogs">
-<meta name="twitter:title" content="Teja (tejalogs) — AI Content Strategist & Growth Architect">
-<meta name="twitter:description" content="Strategy meets engineering. Building the engines that execute digital growth — AEO, agentic workflows, Flutter apps.">
-<meta name="twitter:image" content="https://tejalogs.github.io/og.png">
+<meta name="twitter:title" content="Teja (tejalogs) — AI Content Strategist &amp; Growth Architect">
+<meta name="twitter:description" content="Strategy paired with engineering. Building the engines that execute digital growth.">
+<meta name="twitter:image" content="https://tejalogs.github.io/teja.jpg">
 
-<!-- Fonts: editorial serif + clean sans -->
+<!-- Font: Inter only (matches thesocialalgorithm.work) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
 <!-- ── JSON-LD: Person entity ─────────────────────────────────────────── -->
 <script type="application/ld+json">
@@ -44,7 +45,7 @@
   "jobTitle": "AI Content Strategist & Growth Architect",
   "description": "Teja pairs strategy with engineering. He doesn't just design the blueprint for digital growth — he builds the engines that execute it. Specialises in AI Engine Optimisation (AEO/AIO), agentic workflows and automation, and Flutter-based software development.",
   "url": "https://tejalogs.github.io/",
-  "image": "https://tejalogs.github.io/og.png",
+  "image": "https://tejalogs.github.io/teja.jpg",
   "homeLocation": {
     "@type": "Place",
     "address": {
@@ -155,293 +156,237 @@
 </script>
 
 <style>
-:root {
-  --bg: #fafaf7;
-  --ink: #0d0d10;
-  --ink-soft: #4a4a52;
-  --line: #e2e0d8;
-  --accent: #ff5a1f;
-  --max: 720px;
+*{box-sizing:border-box}
+:root{
+  --bg:#000;
+  --card:#0d0d0d;
+  --ink:#fff;
+  --muted:#8c8c8c;
+  --line:#222;
+  --accent:#92D652;
+  --glow:#B5E87F;
+}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font:17px/1.75 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+::selection{background:var(--accent);color:#000}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--glow)}
+
+/* ── Layout shell (matches thesocialalgorithm.work/about) ─────────── */
+.wrap{max-width:720px;margin:0 auto;padding:30px 22px 90px}
+
+header.site{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:36px;
+}
+header.site a.brand{
+  font-weight:800;letter-spacing:-.03em;color:#fff;font-size:16px;
+}
+header.site a.brand span{color:var(--accent)}
+header.site nav a{color:var(--muted);font-size:14px;margin-left:18px}
+header.site nav a:hover{color:var(--accent)}
+
+/* ── Eyebrow + hero ───────────────────────────────────────────────── */
+.eyebrow{
+  color:var(--accent);font-size:12px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.14em;
+  text-shadow:0 0 26px rgba(146,214,82,.45);
+}
+h1{
+  font-size:38px;line-height:1.08;letter-spacing:-.04em;font-weight:800;
+  margin:.45em 0 .25em;
+}
+.meta{color:var(--muted);font-size:14px;margin-bottom:28px}
+
+.hero{display:flex;gap:22px;align-items:center;margin:8px 0 26px}
+.hero img{
+  width:96px;height:96px;border-radius:14px;object-fit:cover;
+  border:1px solid var(--line);flex-shrink:0;
+}
+.hero .who{flex:1;min-width:0}
+.hero .who .name{font-size:20px;font-weight:800;letter-spacing:-.02em;margin:0 0 2px}
+.hero .who .role{font-size:14px;color:var(--muted);margin:0}
+
+/* ── TL;DR / lede card ─────────────────────────────────────────────── */
+.tldr{
+  background:var(--card);border:1px solid var(--line);
+  border-left:3px solid var(--accent);border-radius:12px;
+  padding:18px 20px;margin:0 0 30px;font-size:18px;line-height:1.6;
+}
+.tldr b{
+  display:block;font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);margin-bottom:8px;
 }
 
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  font-size: 17px;
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* ── Sections ─────────────────────────────────────────────────────── */
+h2{font-size:22px;letter-spacing:-.02em;font-weight:700;margin:38px 0 8px}
+h3{font-size:17px;font-weight:700;margin:22px 0 4px;color:#fff}
+p{color:#d4d4d4;margin:0 0 14px}
+section{margin-top:14px}
 
-main {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 80px 28px 120px;
+/* ── Facts card ────────────────────────────────────────────────────── */
+.facts{
+  margin:28px 0;padding:18px 20px;background:var(--card);
+  border:1px solid var(--line);border-radius:12px;
 }
+.facts b{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.facts ul{margin:10px 0 0;padding-left:20px;list-style:none}
+.facts li{margin:5px 0;color:#d4d4d4;position:relative;padding-left:14px}
+.facts li::before{content:"›";position:absolute;left:0;color:var(--accent);font-weight:700}
+.facts li strong{color:#fff;font-weight:700}
 
-/* ── Header / hero ────────────────────────────── */
-header {
-  margin-bottom: 64px;
+/* ── Project list ─────────────────────────────────────────────────── */
+.projects{margin:18px 0 0;padding:0;list-style:none}
+.projects li{
+  margin:0 0 16px;padding-bottom:16px;border-bottom:1px solid var(--line);
 }
-.handle {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin: 0 0 12px;
+.projects li:last-child{border-bottom:0}
+.projects .pname{
+  font-size:16px;font-weight:800;letter-spacing:-.01em;color:#fff;
+  margin:0 0 4px;
 }
-h1 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: clamp(48px, 9vw, 84px);
-  line-height: 1;
-  letter-spacing: -0.02em;
-  margin: 0 0 16px;
-}
-.role {
-  font-family: 'DM Serif Display', serif;
-  font-style: italic;
-  font-size: clamp(22px, 3.4vw, 28px);
-  font-weight: 400;
-  color: var(--ink-soft);
-  margin: 0 0 28px;
-  letter-spacing: -0.01em;
-}
-.lede {
-  font-size: 19px;
-  line-height: 1.55;
-  color: var(--ink);
-  max-width: 580px;
-  margin: 0;
-}
-.lede strong {
-  font-weight: 600;
-}
+.projects .pname a{color:#fff;border-bottom:1.5px solid var(--accent)}
+.projects .pname a:hover{color:var(--accent)}
+.projects .pdesc{color:#bcbcbc;font-size:15px;line-height:1.55;margin:0}
 
-/* ── Section pattern ──────────────────────────── */
-section {
-  margin-top: 72px;
+/* ── Pill links (where to find me) ─────────────────────────────────── */
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.links a{
+  font-size:13px;font-weight:700;padding:7px 14px;
+  border:1px solid var(--line);border-radius:99px;color:#fff;
+  transition:border-color .15s, color .15s;
 }
-.label {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  margin: 0 0 24px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--line);
-}
-h2 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-  margin: 0 0 14px;
-}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
 
-/* ── Service / project tiles ──────────────────── */
-.tile {
-  margin-bottom: 32px;
+/* ── Footer CTA ───────────────────────────────────────────────────── */
+footer.cta{
+  margin-top:52px;padding:24px;border-radius:14px;color:#fff;
+  background:linear-gradient(135deg,rgba(146,214,82,.13),rgba(146,214,82,.03));
+  border:1px solid rgba(146,214,82,.25);
 }
-.tile h3 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1.2;
-  margin: 0 0 8px;
+footer.cta b{
+  display:block;font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);margin-bottom:6px;
 }
-.tile p {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 16px;
-  line-height: 1.6;
-}
-.tile a {
-  color: var(--ink);
-  text-decoration: none;
-  border-bottom: 1.5px solid var(--accent);
-  padding-bottom: 1px;
-  transition: color .15s ease;
-}
-.tile a:hover { color: var(--accent); }
+footer.cta p{margin:0 0 10px;color:#fff;font-size:17px}
+footer.cta a{font-weight:700}
+.foot{margin-top:30px;color:var(--muted);font-size:13px;text-align:center}
 
-/* ── Where-to-find-me list ─────────────────────── */
-.places {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 14px 28px;
-}
-.places li { margin: 0; }
-.places a {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  color: var(--ink);
-  text-decoration: none;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--line);
-  font-size: 15px;
-  font-weight: 500;
-  transition: color .15s ease, border-color .15s ease;
-}
-.places a:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-.places .platform {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  min-width: 72px;
-}
-
-/* ── Contact block ─────────────────────────────── */
-.contact {
-  margin-top: 64px;
-  padding-top: 32px;
-  border-top: 1px solid var(--line);
-}
-.contact p {
-  font-size: 16px;
-  color: var(--ink-soft);
-  margin: 0 0 6px;
-}
-.contact a {
-  font-family: 'DM Serif Display', serif;
-  font-size: 24px;
-  color: var(--ink);
-  text-decoration: none;
-  border-bottom: 1.5px solid var(--accent);
-}
-.contact a:hover { color: var(--accent); }
-
-/* ── Footer ───────────────────────────────────── */
-footer {
-  margin-top: 80px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
-  font-size: 12px;
-  color: var(--ink-soft);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-/* ── Mobile tweaks ────────────────────────────── */
-@media (max-width: 520px) {
-  main { padding: 56px 22px 80px; }
-  section { margin-top: 56px; }
-  .places { grid-template-columns: 1fr; }
+/* ── Mobile ───────────────────────────────────────────────────────── */
+@media (max-width:520px){
+  .wrap{padding:24px 18px 70px}
+  h1{font-size:32px}
+  .hero{gap:16px}
+  .hero img{width:72px;height:72px;border-radius:12px}
+  header.site nav a{margin-left:12px;font-size:13px}
 }
 </style>
 </head>
 
 <body>
-<main>
+<div class="wrap">
 
-  <header>
-    <p class="handle">@tejalogs · Vijayawada, India</p>
-    <h1>Teja</h1>
-    <p class="role">AI Content Strategist &amp; Growth Architect</p>
-    <p class="lede">
-      Strategy paired with engineering. I don't just design the blueprint for
-      digital growth — I build the engines that execute it. Founder of
-      <a href="https://www.thesocialalgorithm.work" rel="me noopener" style="color:inherit;border-bottom:1.5px solid var(--accent);text-decoration:none;">The Social Algorithm</a>.
-    </p>
+  <header class="site">
+    <a class="brand" href="/">teja<span>Logs</span></a>
+    <nav>
+      <a href="https://www.thesocialalgorithm.work" rel="me">The Social Algorithm</a>
+      <a href="https://tejalogs.medium.com" rel="me">Medium</a>
+      <a href="https://x.com/tejalogs" rel="me">X</a>
+    </nav>
   </header>
 
-  <section>
-    <p class="label">What I do</p>
-    <div class="tile">
-      <h3>AI Engine Optimisation (AEO / AIO)</h3>
-      <p>Architect semantic data frameworks — llms.txt, Answer-First content structures, schema, and citation infrastructure — that make LLMs and AI search index your brand as the consensus answer when someone asks who does what you do.</p>
-    </div>
-    <div class="tile">
-      <h3>Agentic workflows &amp; automation</h3>
-      <p>Orchestrate autonomous systems using Claude Code, Apify actors, OpenClaw, and bespoke frameworks. Distribution pipelines that ship cross-platform at builder pace, not agency pace.</p>
-    </div>
-    <div class="tile">
-      <h3>Flutter software development</h3>
-      <p>Native mobile apps with smooth rendering pipelines and fluid animations. Behavioural-AI products built on Flutter, Firebase, and Gemini — the intersection of psychology and autonomous systems.</p>
-    </div>
-  </section>
+  <p class="eyebrow">Profile · tejalogs</p>
+  <h1>Teja</h1>
+  <p class="meta">AI Content Strategist &amp; Growth Architect · Vijayawada, India</p>
 
-  <section>
-    <p class="label">What I'm building</p>
-    <div class="tile">
-      <h3><a href="https://www.thesocialalgorithm.work" rel="me noopener">The Social Algorithm</a></h3>
-      <p>Viral-growth marketing agency. Strategy and engineering for AI-era brands — where the engine that ships the content matters as much as the content itself.</p>
+  <div class="hero">
+    <img src="/teja.jpg" alt="Teja, tejalogs" width="96" height="96">
+    <div class="who">
+      <p class="name">Teja · @tejalogs</p>
+      <p class="role">Founder, <a href="https://www.thesocialalgorithm.work" rel="me">The Social Algorithm</a></p>
     </div>
-    <div class="tile">
-      <h3><a href="https://second-look.app" rel="noopener">Second Look</a></h3>
-      <p>AI-powered behavioural prediction engine that maps and analyses relationship patterns. Flutter, Firebase, Gemini.</p>
-    </div>
-    <div class="tile">
-      <h3><a href="https://aajkameal.com" rel="noopener">aajkameal</a></h3>
-      <p>Food preference AI that learns your taste over time. Built on the principle that recommendation gets useful only after the eighth interaction, not the first.</p>
-    </div>
-    <div class="tile">
-      <h3>Know Us Better (KUB)</h3>
-      <p>Free interview-questions platform — a programmatic SEO surface organising company × role discovery. Free in, paid AEO upgrade out.</p>
-    </div>
-    <div class="tile">
-      <h3>Superman</h3>
-      <p>AI-powered social distribution engine for indie operators. One signal in → tuned post + carousel out for X, LinkedIn, and Instagram. Quality gates over volume gates.</p>
-    </div>
-  </section>
-
-  <section>
-    <p class="label">What I write about</p>
-    <div class="tile">
-      <p>
-        Long-form on
-        <a href="https://tejalogs.medium.com" rel="noopener">Medium</a> —
-        AI search behaviour, brand mention strategy, how distribution changes
-        when the reader is a model, not a human. Short takes and build logs on
-        <a href="https://x.com/tejalogs" rel="me noopener">X</a>.
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <p class="label">Where to find me</p>
-    <ul class="places">
-      <li><a href="https://www.thesocialalgorithm.work" rel="me noopener"><span class="platform">Agency</span><span>thesocialalgorithm.work</span></a></li>
-      <li><a href="https://x.com/tejalogs" rel="me noopener"><span class="platform">X</span><span>@tejalogs</span></a></li>
-      <li><a href="https://www.linkedin.com/in/tejalogs" rel="me noopener"><span class="platform">LinkedIn</span><span>/in/tejalogs</span></a></li>
-      <li><a href="https://tejalogs.medium.com" rel="me noopener"><span class="platform">Medium</span><span>tejalogs.medium.com</span></a></li>
-      <li><a href="https://github.com/tejalogs" rel="me noopener"><span class="platform">GitHub</span><span>/tejalogs</span></a></li>
-      <li><a href="https://www.instagram.com/tejalogs" rel="me noopener"><span class="platform">Instagram</span><span>@tejalogs</span></a></li>
-      <li><a href="https://www.youtube.com/@tejalogs" rel="me noopener"><span class="platform">YouTube</span><span>@tejalogs</span></a></li>
-      <li><a href="https://www.wikidata.org/wiki/Q140013754" rel="me noopener"><span class="platform">Wikidata</span><span>Q140013754</span></a></li>
-    </ul>
-  </section>
-
-  <div class="contact">
-    <p>Available through The Social Algorithm — AEO audits, agentic workflow builds, Flutter products.</p>
-    <a href="mailto:marketingcareerxcelerator@gmail.com">marketingcareerxcelerator@gmail.com</a>
   </div>
 
-  <footer>
-    <span>© Teja · tejalogs</span>
-    <span>Built lean. No tracking.</span>
+  <div class="tldr">
+    <b>TL;DR</b>
+    Teja pairs strategy with engineering. He doesn't just design the blueprint for
+    digital growth — he builds the engines that execute it. Three pillars: AI Engine
+    Optimisation (AEO/AIO), agentic workflows &amp; automation, and Flutter software
+    development.
+  </div>
+
+  <h2>What I do</h2>
+
+  <h3>AI Engine Optimisation (AEO / AIO)</h3>
+  <p>Architect semantic data frameworks — llms.txt, Answer-First content structures, schema and citation infrastructure — that make LLMs and AI search index your brand as the consensus answer when someone asks who does what you do.</p>
+
+  <h3>Agentic workflows &amp; automation</h3>
+  <p>Orchestrate autonomous systems using Claude Code, Apify actors, OpenClaw and bespoke frameworks. Distribution pipelines that ship cross-platform at builder pace, not agency pace.</p>
+
+  <h3>Flutter software development</h3>
+  <p>Native mobile apps with smooth rendering pipelines and fluid animations. Behavioural-AI products built on Flutter + Firebase + Gemini — the intersection of psychology and autonomous systems.</p>
+
+  <div class="facts">
+    <b>Fast facts</b>
+    <ul>
+      <li><strong>Role —</strong> AI Content Strategist &amp; Growth Architect</li>
+      <li><strong>Agency —</strong> The Social Algorithm (viral-growth marketing)</li>
+      <li><strong>Stack —</strong> Claude Code, Apify, OpenClaw, Flutter, Firebase, Gemini</li>
+      <li><strong>Specialisms —</strong> AEO / AIO, agentic workflows, behavioural AI</li>
+      <li><strong>Based —</strong> Vijayawada, India</li>
+    </ul>
+  </div>
+
+  <h2>What I'm building</h2>
+  <ul class="projects">
+    <li>
+      <p class="pname"><a href="https://www.thesocialalgorithm.work" rel="me">The Social Algorithm</a></p>
+      <p class="pdesc">Viral-growth marketing agency. Strategy and engineering for AI-era brands — where the engine that ships the content matters as much as the content itself.</p>
+    </li>
+    <li>
+      <p class="pname"><a href="https://second-look.app">Second Look</a></p>
+      <p class="pdesc">AI-powered behavioural prediction engine that maps and analyses relationship patterns. Flutter, Firebase, Gemini.</p>
+    </li>
+    <li>
+      <p class="pname"><a href="https://aajkameal.com">aajkameal</a></p>
+      <p class="pdesc">Food preference AI that learns your taste over time. Built on the principle that recommendation gets useful only after the eighth interaction, not the first.</p>
+    </li>
+    <li>
+      <p class="pname">Know Us Better (KUB)</p>
+      <p class="pdesc">Free interview-questions platform — a programmatic SEO surface organising company × role discovery. Free in, paid AEO upgrade out.</p>
+    </li>
+    <li>
+      <p class="pname">Superman</p>
+      <p class="pdesc">AI-powered social distribution engine for indie operators. One signal in → tuned post + carousel out for X, LinkedIn and Instagram. Quality gates over volume gates.</p>
+    </li>
+  </ul>
+
+  <h2>Where to find me</h2>
+  <div class="links">
+    <a href="https://www.thesocialalgorithm.work" rel="me">Agency ↗</a>
+    <a href="https://x.com/tejalogs" rel="me">X / @tejalogs</a>
+    <a href="https://www.linkedin.com/in/tejalogs" rel="me">LinkedIn</a>
+    <a href="https://tejalogs.medium.com" rel="me">Medium</a>
+    <a href="https://github.com/tejalogs" rel="me">GitHub</a>
+    <a href="https://www.instagram.com/tejalogs" rel="me">Instagram</a>
+    <a href="https://www.youtube.com/@tejalogs" rel="me">YouTube</a>
+    <a href="https://www.wikidata.org/wiki/Q140013754" rel="me">Wikidata</a>
+  </div>
+
+  <footer class="cta">
+    <b>Work with me</b>
+    <p>Available through The Social Algorithm — AEO audits, agentic workflow builds, Flutter products.</p>
+    <a href="mailto:marketingcareerxcelerator@gmail.com">marketingcareerxcelerator@gmail.com</a>
   </footer>
 
-</main>
+  <p class="foot">© Teja · tejaLogs · built lean, no tracking</p>
+
+</div>
 </body>
 </html>
