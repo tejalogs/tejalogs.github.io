@@ -36,10 +36,8 @@ Three things I do:
 
 Currently building:
 • The Social Algorithm — viral-growth marketing agency
-• Second Look — AI-powered behavioural prediction engine (Flutter + Firebase + Gemini)
+• Second Look — AI-powered behavioural prediction engine (Flutter + Firebase + Gemini) — trysecondlook.com
 • aajkameal — food preference AI
-• Know Us Better (KUB) — programmatic SEO surface for interview discovery
-• Superman — AI-powered social distribution engine
 
 Vijayawada, India.
 
@@ -84,10 +82,8 @@ I pair strategy with engineering. Three things I do:
 - **Flutter software development** — native apps with smooth rendering, behavioural-AI products on Flutter + Firebase + Gemini
 
 Currently building:
-- [Second Look](https://second-look.app) — AI-powered behavioural prediction engine
-- **aajkameal** — food preference AI
-- **Know Us Better (KUB)** — programmatic SEO for interview discovery
-- **Superman** — AI-powered social distribution engine
+- [Second Look](https://www.trysecondlook.com) — AI-powered behavioural prediction engine ([Play Store](https://play.google.com/store/apps/details?id=com.trysecondlook.app))
+- [aajkameal](https://aajkameal.com) — food preference AI
 
 📍 Vijayawada, India · [tejalogs.github.io](https://tejalogs.github.io) · [thesocialalgorithm.work](https://www.thesocialalgorithm.work) · [Medium](https://tejalogs.medium.com) · [X](https://x.com/tejalogs)
 ```
@@ -106,7 +102,7 @@ Currently building:
 | `P6634` (LinkedIn personal profile ID) | `tejalogs` |
 | `P2037` (GitHub username) | `tejalogs` |
 | `P2397` (YouTube channel ID) | `@tejalogs` |
-| `P800` (notable work) | The Social Algorithm, Second Look, aajkameal, Know Us Better, Superman |
+| `P800` (notable work) | The Social Algorithm, Second Look, aajkameal |
 | `P19` (place of birth) or `P551` (residence) | Vijayawada |
 | `P27` (country of citizenship) | India |
 
