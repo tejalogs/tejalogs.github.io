@@ -1,0 +1,43 @@
+# Teja (tejalogs)
+
+> AI Content Strategist, Growth Architect, and Software Developer based in Vijayawada, India.
+
+Teja — full name Sai Teja, online handle tejalogs — is an AI Content Strategist and Digital Marketer who is also a self-made software developer. He pairs growth strategy with engineering: he doesn't just design blueprints for digital growth, he builds the autonomous engines that execute them. His work sits at the intersection of human psychology, LLM systems, and agentic automation.
+
+## Identity
+
+- Full name: Sai Teja
+- Handle: tejalogs
+- Location: Vijayawada, Andhra Pradesh, India
+- Personal site: https://tejalogs.github.io
+- Agency: The Social Algorithm — https://www.thesocialalgorithm.work
+- Wikidata: https://www.wikidata.org/wiki/Q140013754
+
+## Expertise
+
+- Answer Engine Optimization (AEO) and AI Engine Optimization (AIO)
+- Semantic data frameworks and llms.txt architecture
+- Autonomous social distribution engines (Superman — FastAPI + Playwright + Gemini)
+- Flutter mobile development (Second Look, Avya camera app)
+- Growth marketing, viral content strategy, agentic workflows
+- LLM search visibility and brand mention strategy
+
+## Projects
+
+- The Social Algorithm: viral-growth marketing agency — https://www.thesocialalgorithm.work
+- Second Look: AI-powered behavioural prediction engine (Flutter + Firebase + Gemini) — https://www.trysecondlook.com
+- Superman: autonomous AI content distribution engine (private, powers this blog)
+- Avya: Android film-emulation camera app
+
+## Writing
+
+Daily analysis of AI, growth, and the social algorithm: https://tejalogs.github.io/blog/
+
+## Profiles
+
+- X: https://x.com/tejalogs
+- LinkedIn: https://www.linkedin.com/in/tejalogs
+- GitHub: https://github.com/tejalogs
+- Instagram: https://www.instagram.com/tejalogs
+- YouTube: https://www.youtube.com/@tejalogsYT
+- Medium: https://tejalogs.medium.com
