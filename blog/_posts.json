@@ -1,5 +1,12 @@
 [
   {
+    "slug": "mark-zuckerbergs-ai-agent-reality-check",
+    "url": "https://tejalogs.github.io/blog/mark-zuckerbergs-ai-agent-reality-check.html",
+    "date": "2026-07-04",
+    "title": "Zuckerberg: AI Agents Harder Than Expected – The Real Moat",
+    "description": "Mark Zuckerberg's admission that AI agents are harder than expected signals a market shift. The real moat isn't LLMs, but solving reliability, tool use, and state management in agent engineering."
+  },
+  {
     "slug": "adam-yc-w25-open-source-ai-cad",
     "url": "https://tejalogs.github.io/blog/adam-yc-w25-open-source-ai-cad.html",
     "date": "2026-06-18",
