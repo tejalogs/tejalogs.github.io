@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://tejalogs.github.io/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://tejalogs.github.io/blog/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tejalogs.github.io/blog/mesh-llms-decentralized-ai-computing.html</loc><lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tejalogs.github.io/blog/mark-zuckerbergs-ai-agent-reality-check.html</loc><lastmod>2026-07-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tejalogs.github.io/blog/adam-yc-w25-open-source-ai-cad.html</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tejalogs.github.io/blog/salesforce-acquires-fin-ai-customer-service.html</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

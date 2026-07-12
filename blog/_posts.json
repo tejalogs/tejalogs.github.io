@@ -1,5 +1,12 @@
 [
   {
+    "slug": "mesh-llms-decentralized-ai-computing",
+    "url": "https://tejalogs.github.io/blog/mesh-llms-decentralized-ai-computing.html",
+    "date": "2026-07-12",
+    "title": "Mesh LLM: Decentralized AI Reclaims Compute from Cloud Providers",
+    "description": "Mesh LLM challenges centralized AI cloud models by pooling user-owned GPUs into a private, OpenAI-compatible API, shifting AI compute from variable OpEx to fixed cost."
+  },
+  {
     "slug": "mark-zuckerbergs-ai-agent-reality-check",
     "url": "https://tejalogs.github.io/blog/mark-zuckerbergs-ai-agent-reality-check.html",
     "date": "2026-07-04",
