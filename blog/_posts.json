@@ -1,5 +1,12 @@
 [
   {
+    "slug": "alibabas-qwen-ui-agent-release",
+    "url": "https://tejalogs.github.io/blog/alibabas-qwen-ui-agent-release.html",
+    "date": "2026-08-02",
+    "title": "Alibaba's Qwen-UI-Agent: AI Agents Now See & Use GUIs",
+    "description": "Alibaba's Qwen-UI-Agent enables AI agents to operate graphical user interfaces, bypassing APIs. This shifts AI from text to vision-first, action-oriented automation."
+  },
+  {
     "slug": "cyeras-1b-oasis-security-acquisition",
     "url": "https://tejalogs.github.io/blog/cyeras-1b-oasis-security-acquisition.html",
     "date": "2026-07-29",
