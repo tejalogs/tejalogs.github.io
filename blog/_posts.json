@@ -1,5 +1,12 @@
 [
   {
+    "slug": "airllms-70b-inference-4gb-gpu",
+    "url": "https://tejalogs.github.io/blog/airllms-70b-inference-4gb-gpu.html",
+    "date": "2026-08-03",
+    "title": "AirLLM Runs 70B Model on 4GB GPU: Inference Cost Drops Over 99%",
+    "description": "AirLLM successfully ran a 70-billion parameter model on a 4GB GPU, a task typically requiring multi-A100 servers. This innovation reduces inference hardware costs by over 99%, making powerful AI accessible on consumer-grade hardware like the NVIDIA 3050 or Apple M1."
+  },
+  {
     "slug": "alibabas-qwen-ui-agent-release",
     "url": "https://tejalogs.github.io/blog/alibabas-qwen-ui-agent-release.html",
     "date": "2026-08-02",
