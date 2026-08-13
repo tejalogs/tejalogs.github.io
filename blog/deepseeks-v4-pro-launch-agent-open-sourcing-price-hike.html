@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Deepseek V4 Pro: Open-Sourcing Agents, Raising API Prices</title>
+<meta name="description" content="Deepseek launched its V4 Pro model, open-sourced its Harness v0.1 agent software under an MIT license, and hiked API prices by up to double for peak hours…">
+<link rel="canonical" href="https://tejalogs.github.io/blog/deepseeks-v4-pro-launch-agent-open-sourcing-price-hike.html">
+<meta name="author" content="Teja">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/jpeg" href="/teja.jpg">
+<link rel="apple-touch-icon" href="/teja.jpg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deepseek V4 Pro: Open-Sourcing Agents, Raising API Prices">
+<meta property="og:description" content="Deepseek launched its V4 Pro model, open-sourced its Harness v0.1 agent software under an MIT license, and hiked API prices by up to double for peak hours…">
+<meta property="og:url" content="https://tejalogs.github.io/blog/deepseeks-v4-pro-launch-agent-open-sourcing-price-hike.html">
+<meta property="og:site_name" content="tejaLogs">
+<meta property="og:image" content="https://tejalogs.github.io/teja.jpg">
+<meta property="article:author" content="Teja">
+<meta property="article:published_time" content="2026-08-13T23:31:21.762218">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tejalogs">
+<meta name="twitter:creator" content="@tejalogs">
+<meta name="twitter:title" content="Deepseek V4 Pro: Open-Sourcing Agents, Raising API Prices">
+<meta name="twitter:description" content="Deepseek launched its V4 Pro model, open-sourced its Harness v0.1 agent software under an MIT license, and hiked API prices by up to double for peak hours…">
+<meta name="twitter:image" content="https://tejalogs.github.io/teja.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Deepseek V4 Pro: Open-Sourcing Agents, Raising API Prices", "description": "Deepseek launched its V4 Pro model, open-sourced its Harness v0.1 agent software under an MIT license, and hiked API prices by up to double for peak hours, signaling a shift to an open-workflow strategy.", "datePublished": "2026-08-13T23:31:21.762218", "dateModified": "2026-08-13T23:31:21.762218", "author": {"@type": "Person", "@id": "https://tejalogs.github.io/#person", "name": "Teja", "alternateName": ["tejalogs", "Sai Teja"], "url": "https://tejalogs.github.io/", "sameAs": ["https://www.thesocialalgorithm.work", "https://www.thesocialalgorithm.work/about#teja", "https://x.com/tejalogs", "https://www.linkedin.com/in/tejalogs", "https://github.com/tejalogs", "https://www.instagram.com/tejalogs", "https://tejalogs.medium.com", "https://www.youtube.com/@tejalogsYT", "https://www.wikidata.org/wiki/Q140013754"]}, "publisher": {"@type": "Person", "@id": "https://tejalogs.github.io/#person", "name": "Teja", "url": "https://tejalogs.github.io/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tejalogs.github.io/blog/deepseeks-v4-pro-launch-agent-open-sourcing-price-hike.html"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Deepseek's new V4 Pro model?", "acceptedAnswer": {"@type": "Answer", "text": "Deepseek's V4 Pro model is its flagship AI offering, now officially out of testing with build V4-Pro-0813. It features a one-million-token context window and improved performance, with Terminal Bench 2.1 scores increasing from 72.1 to 87.9, according to Deepseek's benchmarks."}}, {"@type": "Question", "name": "What is Deepseek Harness v0.1?", "acceptedAnswer": {"@type": "Answer", "text": "Deepseek Harness v0.1 is Deepseek's proprietary agent software, now open-sourced as a Developer Preview under the MIT license. It is a plugin-based system for building AI agents, offering features like continuous session logging and tool integration, and is positioned as an alternative to OpenAI's Codex."}}, {"@type": "Question", "name": "How have Deepseek's API prices changed?", "acceptedAnswer": {"@type": "Answer", "text": "Deepseek's API prices increased on August 16, introducing peak and off-peak rates. During peak hours, V4-Pro input costs $1.32 per million tokens and output costs $3.96 per million tokens. Cache hits saw the steepest increase, from $0.003625 to $0.044 at peak."}}, {"@type": "Question", "name": "When did the new Deepseek API rates take effect?", "acceptedAnswer": {"@type": "Answer", "text": "The new Deepseek API rates took effect on August 16 at 4:00 p.m. UTC, according to The Decoder."}}, {"@type": "Question", "name": "What are the peak hours for Deepseek API usage?", "acceptedAnswer": {"@type": "Answer", "text": "Deepseek's peak hours for API usage are from 1 a.m. to 4 a.m. and 6 a.m. to 10 a.m. UTC, which align with the Chinese workday."}}]}</script>
+<style>
+*{box-sizing:border-box}
+:root{--bg:#000;--card:#0d0d0d;--ink:#fff;--muted:#8c8c8c;--line:#222;--accent:#92D652;--glow:#B5E87F}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);
+ font:17px/1.75 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+::selection{background:var(--accent);color:#000}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--glow)}
+.wrap{max-width:720px;margin:0 auto;padding:30px 22px 90px}
+header.site{display:flex;justify-content:space-between;align-items:center;
+ padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:36px}
+header.site a.brand{font-weight:800;letter-spacing:-.03em;color:#fff;font-size:16px;text-decoration:none}
+header.site a.brand span{color:var(--accent)}
+header.site nav a{color:var(--muted);font-size:14px;margin-left:18px}
+header.site nav a:hover{color:var(--accent)}
+.eyebrow{color:var(--accent);font-size:12px;font-weight:700;text-transform:uppercase;
+ letter-spacing:.14em;text-shadow:0 0 26px rgba(146,214,82,.45)}
+h1{font-size:38px;line-height:1.08;letter-spacing:-.04em;font-weight:800;margin:.45em 0 .25em}
+.meta{color:var(--muted);font-size:14px;margin-bottom:28px}
+.tldr{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);
+ border-radius:12px;padding:18px 20px;margin:0 0 30px;font-size:18px;line-height:1.6}
+.tldr b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);margin-bottom:8px}
+h2{font-size:22px;letter-spacing:-.02em;font-weight:700;margin:38px 0 8px}
+p{color:#d4d4d4;margin:0 0 14px}
+.facts{margin:28px 0;padding:18px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.facts b{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.facts ul{margin:10px 0 0;padding-left:20px;list-style:none}
+.facts li{margin:5px 0;color:#d4d4d4;position:relative;padding-left:14px}
+.facts li::before{content:"›";position:absolute;left:0;color:var(--accent);font-weight:700}
+.faq{margin-top:44px;border-top:1px solid var(--line);padding-top:26px}
+.faq h3{font-size:17px;font-weight:700;margin:22px 0 4px;color:#fff}
+.faq p{margin:0;color:#bcbcbc}
+footer.cta{margin-top:52px;padding:24px;border-radius:14px;color:#fff;
+ background:linear-gradient(135deg,rgba(146,214,82,.13),rgba(146,214,82,.03));
+ border:1px solid rgba(146,214,82,.25)}
+footer.cta b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);margin-bottom:6px}
+footer.cta p{margin:0 0 10px;color:#fff;font-size:17px}
+footer.cta a{font-weight:700}
+.foot{margin-top:30px;color:var(--muted);font-size:13px}
+@media (max-width:520px){.wrap{padding:24px 18px 70px}h1{font-size:32px}header.site nav a{margin-left:12px;font-size:13px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="https://tejalogs.github.io/">teja<span>Logs</span></a>
+    <nav>
+      <a href="https://tejalogs.github.io/blog/">Writing</a>
+      <a href="https://www.thesocialalgorithm.work" rel="me">Agency</a>
+      <a href="https://x.com/tejalogs" rel="me">X</a>
+    </nav>
+  </header>
+  <article>
+    <div class="eyebrow">Deepseek&#x27;s V4 Pro launch, agent open-sourcing, and price hike</div>
+    <h1>Deepseek Launches V4 Pro, Open-Sources Agent Software, and Hikes API Prices</h1>
+    <div class="meta">By <a href="https://tejalogs.github.io/" rel="author">Teja (tejalogs)</a> · 2026-08-13</div>
+    <div class="tldr"><b>The short answer</b>Deepseek has officially launched its V4 Pro model, simultaneously open-sourcing its Harness v0.1 agent software and significantly increasing API prices. This strategic trifecta aims to establish Deepseek as a premium, ecosystem-driven AI platform by owning the developer workflow.</div>
+    <div class='facts'><b>Key facts</b><ul><li>Deepseek launched its V4 Pro-0813 build, improving Terminal Bench 2.1 scores from 72.1 to 87.9.</li><li>Deepseek Harness v0.1, its agent software, was open-sourced under an MIT license.</li><li>New API pricing, effective August 16, doubles peak hour V4-Pro input rates to $1.32 per million tokens and output to $3.96 per million tokens.</li><li>Cache hit prices increased from $0.003625 to $0.044 at peak, reducing their discount significantly.</li><li>The open-source Deepseek Harness project, led by Cui Tianyi, attracted 712 beta testers in three days.</li><li>Peak API hours are 1 a.m. to 4 a.m. and 6 a.m. to 10 a.m. UTC.</li></ul></div>
+    <h2>Deepseek V4 Pro Debuts with Performance Gains and Higher Pricing</h2><p>Deepseek has officially moved its flagship V4 Pro model out of testing, introducing build V4-Pro-0813, which is accessible via API and in &#x27;Expert Mode&#x27; on its app and web interface. According to Deepseek&#x27;s own comparison table, the new build demonstrates a significant performance leap, with Terminal Bench 2.1 scores jumping from 72.1 to 87.9 and DeepSWE scores increasing from 12.8 to 62.7, as reported by The Decoder. Artificial Analysis also noted an improvement, with V4-Pro climbing from 45 to 53 on its Intelligence Index, tying GLM-5.2. This performance confidence underpins a new pricing structure, effective August 16, which introduces peak and off-peak rates, with peak hour input costs doubling from $0.66 to $1.32 per million tokens and output costs jumping from $1.98 to $3.96.</p><h2>Open-Sourcing Deepseek Harness v0.1 to Drive Ecosystem Adoption</h2><p>Alongside the V4 Pro launch, Deepseek has open-sourced its proprietary agent software, Deepseek Harness v0.1, as a Developer Preview under an MIT license. The Decoder notes this software is positioned as an alternative to OpenAI&#x27;s Codex and Claude, built on the Cordis plugin system. This system allows for swappable plugins for tools, sandboxes, sessions, and UI components, featuring a continuous session log to track prompts, tool calls, and results. The project, led by Cui Tianyi from Jane Street, garnered significant interest, with 712 projects signing up for beta testing within three days of the call in early August, indicating a strong developer appetite for open-source agent tooling.</p><h2>Strategic Price Adjustments and Tiered Access</h2><p>Deepseek&#x27;s new API pricing structure, which came into effect on August 16, introduces peak and off-peak rates, a system first implemented in February 2025 with V3 and R1 models. The Decoder reports that off-peak usage costs half as much, with peak hours aligning with the Chinese workday (1 a.m. to 4 a.m. and 6 a.m. to 10 a.m. UTC). During peak hours, V4-Pro input costs $1.32 per million tokens and output costs $3.96 per million tokens. Cache hits, crucial for agents repeatedly reading files, will see the steepest increase, going from $0.003625 to $0.022 off-peak and $0.044 at peak, effectively shrinking the cache discount from one-hundred-twentieth to one-thirtieth of the regular input price.</p><h2>The &#x27;Open Workflow&#x27; Strategy: Beyond Open Weights</h2><p>Deepseek&#x27;s simultaneous release of a more powerful model, open-sourcing of its agent framework, and API price hike signals a new competitive strategy in the AI landscape. This approach moves beyond simply offering open-source model weights or a closed API. By open-sourcing its agent software under an MIT license, Deepseek provides developers with the intricate tooling necessary for building sophisticated AI agents, effectively giving away the &#x27;razor.&#x27; This move aims to cultivate a robust developer ecosystem, driving adoption and creating a captive audience that will then pay for the premium &#x27;blades&#x27; – the advanced capabilities of the V4 Pro API. This strategic trifecta challenges the conventional wisdom that model performance alone guarantees market dominance, instead betting on owning the developer&#x27;s entire workflow.</p>
+    <section class='faq'><h2>FAQ</h2><h3>What is Deepseek&#x27;s new V4 Pro model?</h3><p>Deepseek&#x27;s V4 Pro model is its flagship AI offering, now officially out of testing with build V4-Pro-0813. It features a one-million-token context window and improved performance, with Terminal Bench 2.1 scores increasing from 72.1 to 87.9, according to Deepseek&#x27;s benchmarks.</p><h3>What is Deepseek Harness v0.1?</h3><p>Deepseek Harness v0.1 is Deepseek&#x27;s proprietary agent software, now open-sourced as a Developer Preview under the MIT license. It is a plugin-based system for building AI agents, offering features like continuous session logging and tool integration, and is positioned as an alternative to OpenAI&#x27;s Codex.</p><h3>How have Deepseek&#x27;s API prices changed?</h3><p>Deepseek&#x27;s API prices increased on August 16, introducing peak and off-peak rates. During peak hours, V4-Pro input costs $1.32 per million tokens and output costs $3.96 per million tokens. Cache hits saw the steepest increase, from $0.003625 to $0.044 at peak.</p><h3>When did the new Deepseek API rates take effect?</h3><p>The new Deepseek API rates took effect on August 16 at 4:00 p.m. UTC, according to The Decoder.</p><h3>What are the peak hours for Deepseek API usage?</h3><p>Deepseek&#x27;s peak hours for API usage are from 1 a.m. to 4 a.m. and 6 a.m. to 10 a.m. UTC, which align with the Chinese workday.</p></section>
+    <section style="margin-top:44px;border-top:1px solid #222;padding-top:22px"><h2 style="font-size:18px;letter-spacing:-.02em;font-weight:700;margin:0 0 14px">Related reading</h2><ul style="margin:0;padding:0"><li style="margin:0 0 10px;list-style:none"><a href="https://tejalogs.github.io/blog/adam-yc-w25-open-source-ai-cad.html" style="color:#92D652;text-decoration:none;font-weight:700">Adam (YC W25): Open-Source AI CAD Disrupts Proprietary Software</a></li><li style="margin:0 0 10px;list-style:none"><a href="https://tejalogs.github.io/blog/cyeras-1b-oasis-security-acquisition.html" style="color:#92D652;text-decoration:none;font-weight:700">Cyera Buys Oasis Security for $1B: AI Agent Security Race Begins</a></li><li style="margin:0 0 10px;list-style:none"><a href="https://tejalogs.github.io/blog/mark-zuckerbergs-ai-agent-reality-check.html" style="color:#92D652;text-decoration:none;font-weight:700">Zuckerberg: AI Agents Harder Than Expected – The Real Moat</a></li></ul></section>
+    <footer class="cta">
+      <b>Work with me</b>
+      <p>Available through <a href="https://www.thesocialalgorithm.work">The Social Algorithm</a> — AEO audits, agentic workflow builds, Flutter products.</p>
+      <a href="mailto:saiteja709@gmail.com">saiteja709@gmail.com</a>
+    </footer>
+    <div class="foot">Written by <a href="https://tejalogs.github.io/" rel="author">Teja (tejalogs)</a>. Follow <a href="https://x.com/tejalogs" rel="noopener">@tejalogs</a> on X.</div>
+  </article>
+</div>
+</body>
+</html>

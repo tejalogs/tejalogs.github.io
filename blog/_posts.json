@@ -1,5 +1,12 @@
 [
   {
+    "slug": "deepseeks-v4-pro-launch-agent-open-sourcing-price-hike",
+    "url": "https://tejalogs.github.io/blog/deepseeks-v4-pro-launch-agent-open-sourcing-price-hike.html",
+    "date": "2026-08-13",
+    "title": "Deepseek V4 Pro: Open-Sourcing Agents, Raising API Prices",
+    "description": "Deepseek launched its V4 Pro model, open-sourced its Harness v0.1 agent software under an MIT license, and hiked API prices by up to double for peak hours, signaling a shift to an open-workflow strategy."
+  },
+  {
     "slug": "airllms-70b-inference-4gb-gpu",
     "url": "https://tejalogs.github.io/blog/airllms-70b-inference-4gb-gpu.html",
     "date": "2026-08-03",
