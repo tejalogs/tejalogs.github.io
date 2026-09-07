@@ -15,100 +15,344 @@
     margin: 0 auto;
     padding: 48px 24px 96px;
   }
+  h1 { font-size: 28px; margin-bottom: 4px; letter-spacing: -0.01em; }
+  h2 { font-size: 17px; margin-top: 40px; margin-bottom: 8px; letter-spacing: 0.02em; text-transform: uppercase; opacity: 0.7; }
+  h3 { font-size: 15px; margin-top: 24px; margin-bottom: 4px; }
+  p { margin: 12px 0; }
+  ul { margin: 12px 0; padding-left: 22px; }
+  li { margin: 6px 0; }
+  .meta { font-size: 14px; opacity: 0.6; margin-bottom: 32px; }
+  a { color: #c2410c; }
+  code { background: #efefef; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+  hr { border: none; border-top: 1px solid rgba(128,128,128,0.2); margin: 40px 0; }
+  .brand { font-weight: 700; letter-spacing: 0.04em; }
+  .callout {
+    background: rgba(194,65,12,0.06);
+    border-left: 3px solid #c2410c;
+    padding: 12px 16px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .callout p { margin: 6px 0; }
+  .tablewrap { overflow-x: auto; margin: 16px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; min-width: 460px; }
+  th, td { text-align: left; padding: 10px 12px 10px 0; vertical-align: top; }
+  th { border-bottom: 1px solid rgba(0,0,0,0.2); font-weight: 600; }
+  td { border-bottom: 1px solid rgba(0,0,0,0.07); }
   @media (prefers-color-scheme: dark) {
     body { color: #e8e8e8; background: #0f0f10; }
     a { color: #f5af19; }
-    code { background: #1a1a1c; }
+    code { background: #1a1a1c; color: #e8e8e8; }
+    th { border-bottom-color: rgba(255,255,255,0.18); }
+    td { border-bottom-color: rgba(255,255,255,0.08); }
+    .callout { background: rgba(245,175,25,0.08); border-left-color: #f5af19; }
   }
-  h1 { font-size: 28px; margin-bottom: 4px; letter-spacing: -0.01em; }
-  h2 { font-size: 17px; margin-top: 32px; margin-bottom: 8px; letter-spacing: 0.02em; text-transform: uppercase; opacity: 0.7; }
-  p { margin: 12px 0; }
-  .meta { font-size: 14px; opacity: 0.6; margin-bottom: 32px; }
-  a { color: #c2410c; }
-  code { background: #efefef; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
-  hr { border: none; border-top: 1px solid rgba(128,128,128,0.2); margin: 40px 0; }
-  .brand { font-weight: 700; letter-spacing: 0.04em; }
 </style>
 </head>
 <body>
 
-<p class="brand">AVYA</p>
+<p class="brand">AVA</p>
 <h1>Privacy Policy</h1>
-<p class="meta">Effective: 30 August 2026</p>
+<p class="meta">Effective: 7 September 2026</p>
 
 <p>
-  Ava is a film camera app developed by <strong>Tejalogs</strong>. This policy explains what data the app handles and what it does not.
+  Ava is a film-emulation camera app for Android, package <code>com.ava.camera</code>,
+  developed by <strong>Tejalogs</strong>. This policy covers the Ava Android app and
+  nothing else. It describes what the app does with your data, in enough detail that
+  you can check it against the app itself.
 </p>
 
-<h2>What Ava collects</h2>
+<div class="callout">
+  <p>
+    <strong>The short version.</strong> Ava has no accounts, no servers and no analytics,
+    and it sends nothing off your phone — it does not hold Android's internet permission,
+    so it cannot upload anything. Two things are worth knowing anyway. Every photo and clip is copied into your device's normal photo gallery
+    automatically, so any cloud photo backup you already use will upload that copy the
+    same way it uploads everything else you shoot. And the place name Ava prints under
+    each photo is part of the film stock's fiction, not a reading of where you are.
+  </p>
+</div>
+
+<h2>What Ava sends off your device</h2>
 <p>
-  <strong>Nothing.</strong> Ava has no internet permission at all — it is not
-  technically capable of sending your photos, or anything else, anywhere. There
-  are no accounts, no analytics and no servers.
+  <strong>Nothing.</strong> Ava does not hold the Android <code>INTERNET</code> permission,
+  so the app's own process cannot open a network connection. There are no accounts, no
+  servers, no analytics, no crash-reporting service, no advertising network, and no Firebase.
+</p>
+<p>
+  Two honest footnotes to that. Ava does hold <code>ACCESS_NETWORK_STATE</code>, a permission
+  added by one of the Android camera libraries it is built on; Google Play will show it in the
+  app's permission list. The image library that displays your diary uses it to check whether
+  the device is online. It reads a yes-or-no answer and sends nothing, and without the internet
+  permission it could not send anything if it tried. Separately, tapping the privacy link inside
+  the app opens this page in your browser — your browser then makes that request, not Ava.
 </p>
 
-<h2>Where your photos are saved</h2>
-<p>
-  Every photo and video you capture is saved in <strong>two</strong> places on
-  your phone:
-</p>
+<h2>What Ava stores on your device</h2>
+<p>Ava keeps data in four places inside its own private storage, plus your gallery.</p>
 <ul>
   <li>
-    <strong>Inside Ava</strong> — the copy your diary shows, in the app's private
-    storage. Deleting Ava deletes it.
+    <strong>Your photos and clips</strong> — the copies your diary shows, as ordinary JPEG
+    and MP4 files.
   </li>
   <li>
-    <strong>In your device gallery</strong> — a copy is also published to
-    <code>Pictures/Ava</code> (and <code>Movies/Ava</code> for clips) so your
-    photos appear in Google Photos, Gallery, and any other app you have given
-    access to your media.
+    <strong>A small database</strong> — one row per photo or clip, holding the file path, the
+    film stock's name, the time it was saved, any caption you typed, the film stock's place
+    label, the exposure readout, and a reference to the gallery copy.
+  </li>
+  <li>
+    <strong>Three settings</strong> — your current film stock, its strength, and whether you
+    have finished the intro. Nothing else.
+  </li>
+  <li>
+    <strong>Temporary capture files</strong> — while a photo is being developed or a clip is
+    being recorded, the work-in-progress file sits in Ava's cache and is deleted immediately
+    afterwards. If a capture is interrupted, a file can be left behind there; clearing the
+    app's cache or uninstalling removes it.
   </li>
 </ul>
 <p>
-  That second copy is a normal part of your phone's photo library. It is visible
-  to other apps that can read your media, and if you have a cloud photo backup
-  switched on, that service will back it up like any other picture you take.
-  Ava itself never uploads anything.
+  Captions are the only thing here you type; everything else in that list is your
+  photographs, which are personal in themselves. Ava never writes a caption for you, and
+  nothing analyses one or sends it anywhere on its own. A caption is shown in your diary,
+  included as text when you share, and moves with the database in a phone-to-phone transfer.
+</p>
+
+<h2>The copy in your gallery</h2>
+<p>
+  Every photo and clip Ava keeps is <strong>also copied into your device's shared photo
+  library, automatically, whenever that write succeeds</strong>. There is no setting for
+  this and no way to turn it off.
+</p>
+<p>
+  On Android 10 and later the copy goes into a folder named <code>Ava</code> — under Pictures
+  for photos, Movies for clips. On Android 9 and earlier Ava does not set a folder, so the
+  copy lands wherever your device files it. Each copy is named for the app and the moment it
+  was taken — <code>Ava_</code> followed by the capture time in milliseconds.
+</p>
+<p>
+  That copy is an ordinary picture in your photo library. Any app you have given access to
+  your media can see it, including its filename. If you have a cloud photo backup switched on,
+  that service will back it up like any other photo you take. <strong>Ava itself uploads
+  nothing</strong> — but this is the point where your photos become reachable by software
+  other than Ava, so it is the most important sentence on this page.
+</p>
+<p>
+  The copy is best-effort. If your device refuses the write — most often on Android 9 and
+  earlier, when the storage permission below has been declined — Ava keeps the private copy
+  and continues without showing you an error. In that case the photo exists in Ava's diary
+  and not in your gallery.
 </p>
 
 <h2>Permissions</h2>
 <p>
-  <strong>Camera</strong> — to see through the lens and capture photos and video.
-</p>
-<p>
-  <strong>Microphone</strong> — used only while you are recording a video in CINE
-  mode, to record that clip's audio. Ava does not listen at any other time and
-  never records audio on its own.
-</p>
-<p>
-  <strong>Storage (Android 9 and below only)</strong> — needed on older versions
-  of Android to save the gallery copy described above. Newer versions do not
-  require it.
+  Google Play lists every permission an app holds, including ones added by the libraries it is
+  built from. Here is the complete list, and what each is actually for.
 </p>
 
-<h2>Third parties</h2>
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>Permission</th><th>Why</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Camera</strong></td>
+      <td>To show the viewfinder and capture photos and video. Requested when you tap to begin,
+          or from the "optics offline" screen if you declined earlier.</td>
+    </tr>
+    <tr>
+      <td><strong>Microphone</strong></td>
+      <td>To record sound into a CINE clip. See below.</td>
+    </tr>
+    <tr>
+      <td><strong>Vibrate</strong></td>
+      <td>The shutter and the dial detents you feel. Nothing else uses it.</td>
+    </tr>
+    <tr>
+      <td><strong>Storage</strong><br /><span style="opacity:0.6">Android 9 and below only</span></td>
+      <td>To write the gallery copy on older Android versions. Newer versions need no permission
+          for this. Because Ava asks to write, the build tools also list a matching
+          read permission — Ava never uses it and has no way to browse your photo library.</td>
+    </tr>
+    <tr>
+      <td><strong>Network state</strong></td>
+      <td>Added by an Android camera library, used by the image loader to check whether the
+          device is online. Ava cannot use the network.</td>
+    </tr>
+    <tr>
+      <td><strong>An internal app permission</strong></td>
+      <td>Added by an AndroidX library so that only Ava's own code can talk to itself. It grants
+          no access to anything on your device.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 <p>
-  Ava uses no third-party analytics, no crash reporting services, no advertising networks, and no Firebase services that transmit user data. No information is shared with anyone.
+  Ava declares <strong>no location permission</strong>, <strong>no permission to read your
+  existing photos</strong>, no contacts, no notifications, and no advertising identifier.
+</p>
+
+<h3>About the microphone</h3>
+<p>
+  Ava asks for the microphone the moment you switch to CINE mode, before you record anything —
+  that is earlier than you might expect, and you may see the request even if the camera itself
+  is unavailable. It asks a second time if you tap record while the microphone is still
+  ungranted. Two refusals is Android's threshold for hiding a request permanently; after that
+  CINE keeps working and records silent. The permission is used in exactly one place: attaching sound to a clip as it
+  starts recording. There is no background listening and no other audio capture anywhere in
+  the app.
+</p>
+<p>
+  Three things worth knowing. Tapping record before you answer the request starts a silent
+  clip rather than no clip. Once you have granted the microphone, every CINE clip has sound —
+  there is no per-clip mute. And clips stop automatically at about fifteen seconds. Recorded audio travels inside the clip, including into the gallery
+  copy described above. If you decline the microphone, CINE still works and records silent.
+</p>
+
+<h2>Location, and the place names on your photos</h2>
+<p>
+  <strong>Ava never accesses your location.</strong> It holds no location permission, calls no
+  location or geocoding service, and writes no GPS tag into any photo or clip.
+</p>
+<p>
+  The place name shown under a photo in the diary — VARANASI, DELHI, ROOFTOP — is a fixed label
+  belonging to the film stock you shot with. It is part of the app's fiction. It is the same
+  for everyone using that stock, it is not derived from your device, and it is stored only in
+  Ava's own database. It is never written into the image file and never included when you
+  share.
+</p>
+
+<h2>What Ava writes into your photos</h2>
+<p>
+  A photo Ava saves is re-encoded from the image itself, so it does not inherit the metadata
+  your phone's camera recorded. In its place Ava stamps an invented camera identity: a make of
+  <code>AVA</code>, a model of <code>CR-206</code>, and its own software name. Where the
+  on-screen readout can be parsed it also writes up to eight exposure figures — aperture as both
+  an f-number and an APEX value, sensitivity, exposure time, exposure compensation, focal length
+  both actual and 35mm-equivalent, and a lens name — some of which are characteristics of the
+  film stock rather than measurements of the scene.
+</p>
+<p>
+  No location tag and no date or time tag is written. Clips are not stamped at all; they carry
+  only what your device's video recorder writes into them, which does not include location.
+</p>
+
+<h2>Sharing</h2>
+<p>
+  When you share a photo or clip, Ava hands the app you choose a read-only handle to that one
+  file, plus your caption if you wrote one. Every share also appends the text
+  <code>#AvaCamera</code>, whether or not you wrote a caption. Once the file reaches the app you
+  picked, that app's own privacy policy governs what happens to it. Ava has no part in it and
+  no way to reach it afterwards.
+</p>
+<p>
+  No other app can reach Ava's private storage. A share grants access to the single file you
+  selected and to nothing else — not to your other photos, and not to Ava's database.
+</p>
+
+<h2>Keeping and deleting your data</h2>
+<p>
+  Ava keeps what you make <strong>indefinitely, until you delete it</strong>. There is no
+  expiry, no automatic clean-up and no account to close. The one exception is installing an
+  older version of Ava than the one you have: the diary index is rebuilt from scratch and your
+  existing entries stop appearing, though the image files stay in Ava's storage until you
+  uninstall.
+</p>
+<p>
+  Deleting a memory removes its row from your diary, then tries to delete both Ava's private
+  file and the copy in your gallery. Those two steps are best-effort: if either fails, or the
+  gallery copy was never successfully written, the delete still succeeds for everything else and
+  you can remove whatever is left from your gallery app. There is no delete-everything button;
+  memories are deleted one at a time.
+</p>
+<p>
+  Uninstalling Ava, or clearing its storage in Android's settings, removes everything in the
+  four private locations listed above — your diary, its database and its settings. <strong>It
+  does not remove the copies in your gallery</strong>, which are ordinary photos in your
+  library and remain after the app is gone.
+</p>
+
+<h2>How your data is protected</h2>
+<ul>
+  <li>
+    Ava's own diary, database and settings live in its private app storage, which Android
+    isolates from other apps. The gallery copy described above is deliberately outside that
+    sandbox.
+  </li>
+  <li>
+    Ava adds no encryption of its own. Your photos and diary are protected by Android's app
+    sandbox and by whatever device encryption your phone provides. On most modern devices that
+    means Ava's files are encrypted until you first unlock the phone after a restart.
+  </li>
+  <li>
+    The component that hands files to other apps is not exported and releases one file at a
+    time, only to the app you pick, and only for reading. Ava's database is outside its reach.
+  </li>
+  <li>
+    Ava's data is excluded from Google's cloud backup. On Android 12 and later, some
+    manufacturers still include app data in a direct phone-to-phone transfer when you set up a
+    new device; if that happens, your Ava photos and diary would move with it.
+  </li>
+  <li>
+    Ava does not shield its screens from screenshots or screen recording, so the viewfinder and
+    your diary appear in the app switcher and can be captured like any other app.
+  </li>
+  <li>
+    There is no transmission to protect: the app cannot reach a network.
+  </li>
+</ul>
+
+<h2>Information about your device</h2>
+<p>
+  To decide how large a photo it can process, Ava reads how much memory your phone has and how
+  large an image its graphics hardware can handle. It also reads your system animation setting
+  so it can respect "remove animations". These are read while the app runs, are used only for
+  that purpose and are not stored. The camera library Ava is built on also checks your phone's
+  make and model against its own list of known hardware quirks. None of these are identifiers:
+  Ava reads no device ID, no advertising ID, and no hardware serial number of any kind.
+</p>
+
+<h2>Your rights</h2>
+<p>
+  Data-protection law gives you rights over personal data a company holds about you — to see
+  it, correct it, take a copy, have it erased, or object to its use.
+</p>
+<p>
+  <strong>The developer of Ava never receives any of your data</strong>, so there is nothing
+  held to disclose, correct, export or erase. In practice you exercise these rights directly on
+  your phone: your photos and captions are files and a database on your own device, you can read
+  and change them in the app, you can copy them out through your gallery or the share sheet, and
+  you can erase them by deleting a memory or uninstalling the app. Ava does not sell or share
+  personal information, and there is no profiling, no automated decision-making and no
+  advertising. If you are in a region with a data-protection authority, you retain the right to
+  complain to it.
 </p>
 
 <h2>Children</h2>
 <p>
-  Ava is not directed at children under 13.
+  Ava is a general-audience camera app. It is not directed at children, and we do not knowingly
+  collect information from anyone — there is nothing for the developer to collect. If you are
+  below the age of digital consent where you live, please use Ava with a parent or guardian.
 </p>
 
 <h2>Changes to this policy</h2>
 <p>
-  We may update this policy from time to time. The effective date at the top of this page reflects the latest version.
+  This policy may be updated as the app changes. The effective date at the top of the page
+  reflects the current version. Material changes will be reflected here before or alongside the
+  release that makes them true.
 </p>
 
 <h2>Contact</h2>
 <p>
-  For privacy questions, email <a href="mailto:contact@trysecondlook.com">contact@trysecondlook.com</a>.
+  For privacy questions about Ava, email
+  <a href="mailto:contact@trysecondlook.com">contact@trysecondlook.com</a>.
 </p>
 
 <hr />
 
-<p class="meta">© Tejalogs. Ava is a registered app on Google Play (package <code>com.ava.camera</code>).</p>
+<p class="meta">© Tejalogs. Ava for Android, package <code>com.ava.camera</code>.</p>
 
 </body>
 </html>
