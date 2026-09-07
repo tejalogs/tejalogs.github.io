@@ -114,8 +114,8 @@
 <p>
   Captions are the only thing here you type; everything else in that list is your
   photographs, which are personal in themselves. Ava never writes a caption for you, and
-  nothing analyses one or sends it anywhere on its own. A caption is shown in your diary,
-  included as text when you share, and moves with the database in a phone-to-phone transfer.
+  nothing analyses one or sends it anywhere on its own. A caption is shown in your diary and
+  included as text when you share.
 </p>
 
 <h2>The copy in your gallery</h2>
@@ -261,11 +261,12 @@
   uninstall.
 </p>
 <p>
-  Deleting a memory removes its row from your diary, then tries to delete both Ava's private
-  file and the copy in your gallery. Those two steps are best-effort: if either fails, or the
-  gallery copy was never successfully written, the delete still succeeds for everything else and
-  you can remove whatever is left from your gallery app. There is no delete-everything button;
-  memories are deleted one at a time.
+  Deleting a memory deletes Ava's own copy and the copy in your gallery, and then removes the
+  entry from your diary. If Ava cannot delete its own copy, the entry <strong>stays</strong> in
+  your diary and Ava tells you so — nothing is stranded somewhere you can no longer see it. If
+  it is the gallery copy that will not go, the entry is removed and Ava tells you to delete the
+  leftover in your gallery app. There is no delete-everything button; memories are deleted one
+  at a time.
 </p>
 <p>
   Uninstalling Ava, or clearing its storage in Android's settings, removes everything in the
@@ -291,9 +292,10 @@
     time, only to the app you pick, and only for reading. Ava's database is outside its reach.
   </li>
   <li>
-    Ava's data is excluded from Google's cloud backup. On Android 12 and later, some
-    manufacturers still include app data in a direct phone-to-phone transfer when you set up a
-    new device; if that happens, your Ava photos and diary would move with it.
+    Your photos, your diary and your settings are excluded from Google's cloud backup
+    <em>and</em> from Android's phone-to-phone transfer. Both are declared explicitly by the
+    app rather than left to a default, so setting up a new handset does not carry your Ava
+    diary across to it.
   </li>
   <li>
     Ava does not shield its screens from screenshots or screen recording, so the viewfinder and
