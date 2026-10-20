@@ -97,14 +97,16 @@
   </li>
   <li>
     <strong>A small database</strong> — one row per photo or clip, holding the file path, the
-    film stock's name, the time it was saved, any caption you typed, the film stock's place
-    label, the exposure readout, and a reference to the gallery copy.
+    film stock's name, the date and time of the photo or clip, its roll and frame number
+    (clips carry none), any caption you typed, the film stock's place label, the exposure
+    readout, and a reference to the gallery copy.
   </li>
   <li>
     <strong>A few settings and flags</strong> — your film stock and its strength, your flash
     setting and your sounds setting, plus a handful of small markers that remember where you are in the app:
-    whether you have finished the intro, whether Ava has already asked you about a
-    permission or for a rating, and how many photos you have shared. All of it is a few
+    whether you have finished the intro, whether Ava has asked you for the camera or
+    microphone and whether you turned it down, whether it has asked you for a rating, and how
+    many times you have tapped Share on a photo or clip. All of it is a few
     dozen bytes, none of it identifies you, and none of it leaves the phone.
   </li>
   <li>
@@ -161,8 +163,9 @@
   <tbody>
     <tr>
       <td><strong>Camera</strong></td>
-      <td>To show the viewfinder and capture photos and video. Requested when you tap to begin,
-          or from the "optics offline" screen if you declined earlier.</td>
+      <td>To show the viewfinder and capture photos and video. Requested when you tap Load on
+          the first page, or with Turn on camera on the "Camera is off" screen if you declined
+          earlier (if Android will no longer ask, that screen sends you to Settings).</td>
     </tr>
     <tr>
       <td><strong>Microphone</strong></td>
@@ -170,13 +173,16 @@
     </tr>
     <tr>
       <td><strong>Vibrate</strong></td>
-      <td>The shutter and the dial detents you feel. Nothing else uses it.</td>
+      <td>Haptic feedback only: the shutter, the dial and wheel detents, focus lock, switching
+          between photo and CINE, starting and stopping a clip, changing film, and the end of a
+          roll. Nothing else uses it.</td>
     </tr>
     <tr>
       <td><strong>Storage</strong><br /><span style="opacity:0.6">Android 9 and below only</span></td>
       <td>To write the gallery copy on older Android versions. Newer versions need no permission
-          for this. Because Ava asks to write, the build tools also list a matching
-          read permission — Ava never uses it and has no way to browse your photo library.</td>
+          for this. On those older versions Android grants read access along with write, so the
+          same permission would also let Ava read shared storage; Ava has no code that reads or
+          browses your photo library.</td>
     </tr>
     <tr>
       <td><strong>Network state</strong></td>
@@ -193,8 +199,9 @@
 </div>
 
 <p>
-  Ava declares <strong>no location permission</strong>, <strong>no permission to read your
-  existing photos</strong>, no contacts, no notifications, and no advertising identifier.
+  Ava declares <strong>no location permission</strong>, no contacts, no notifications, and no
+  advertising identifier. On Android 10 and later it has <strong>no permission to read your
+  existing photos</strong>; on Android 9 and below, see Storage above.
 </p>
 
 <h3>About the microphone</h3>
@@ -202,15 +209,18 @@
   Ava asks for the microphone the moment you switch to CINE mode, before you record anything —
   that is earlier than you might expect, and you may see the request even if the camera itself
   is unavailable. It asks a second time if you tap record while the microphone is still
-  ungranted. Two refusals is Android's threshold for hiding a request permanently; after that
+  ungranted and CINE's sound is on. Two refusals is Android's threshold for hiding a request permanently; after that
   CINE keeps working and records silent. The permission is used in exactly one place: attaching sound to a clip as it
   starts recording. There is no background listening and no other audio capture anywhere in
   the app.
 </p>
 <p>
   Three things worth knowing. Tapping record before you answer the request starts a silent
-  clip rather than no clip. Once you have granted the microphone, every CINE clip has sound —
-  there is no per-clip mute. And clips stop automatically at about fifteen seconds. Recorded audio travels inside the clip, including into the gallery
+  clip rather than no clip. Once you have granted the microphone, CINE clips record sound
+  unless you turn CINE's Sound switch off (in CINE it takes the flash button's place); with it
+  off, clips record with no audio and tapping record does not ask for the microphone. The
+  switch is not your sounds setting, which only controls Ava's own sound effects, and it is
+  not saved: it goes back to on the next time Ava starts fresh. And clips stop automatically at about fifteen seconds. Recorded audio travels inside the clip, including into the gallery
   copy described above. If you decline the microphone, CINE still works and records silent.
 </p>
 
@@ -229,17 +239,23 @@
 
 <h2>What Ava writes into your photos</h2>
 <p>
-  A photo Ava saves is re-encoded from the image itself, so it does not inherit the metadata
-  your phone's camera recorded. In its place Ava stamps an invented camera identity: a make of
-  <code>AVA</code>, a model of <code>CR-206</code>, and its own software name. Where the
-  on-screen readout can be parsed it also writes up to eight exposure figures — aperture as both
-  an f-number and an APEX value, sensitivity, exposure time, exposure compensation, focal length
-  both actual and 35mm-equivalent, and a lens name — some of which are characteristics of the
-  film stock rather than measurements of the scene.
+  A photo Ava saves is re-encoded from the image itself, so most of the metadata your phone's
+  camera recorded is not carried over. In its place Ava stamps an invented camera identity: a
+  make of <code>AVA</code>, a model of <code>CR-206</code>, and its own software name. It also
+  writes up to eight exposure figures — aperture as both an f-number and an APEX value,
+  sensitivity, exposure time, exposure compensation, focal length both actual and
+  35mm-equivalent, and a lens name. Where your phone's camera reports them, the f-number,
+  sensitivity, exposure time and actual focal length are copied from the camera's own record of
+  the shot, and the APEX value and lens name are worked out from that f-number. Everything else
+  comes from the on-screen readout, and some of those figures are characteristics of the film
+  stock rather than measurements of the scene.
 </p>
 <p>
-  No location tag and no date or time tag is written. Clips are not stamped at all; they carry
-  only what your device's video recorder writes into them, which does not include location.
+  Each photo also records the date and time it was taken, in your phone's local time, with its
+  offset from UTC, which shows the time zone you were in. These travel with the copy in your
+  gallery and with any photo you share. <strong>No location tag is written.</strong> Clips are
+  not stamped at all; they carry only what your device's video recorder writes into them,
+  which does not include location.
 </p>
 
 <h2>Sharing</h2>
@@ -329,7 +345,9 @@
   held to disclose, correct, export or erase. In practice you exercise these rights directly on
   your phone: your photos and captions are files and a database on your own device, you can read
   and change them in the app, you can copy them out through your gallery or the share sheet, and
-  you can erase them by deleting a memory or uninstalling the app. Ava does not sell or share
+  you can erase them by deleting a memory, which removes both Ava's copy and its gallery copy.
+  Uninstalling removes only Ava's own copies; the gallery copies stay, and neither step reaches
+  a copy a cloud backup has already uploaded or a file you have shared. Ava does not sell or share
   personal information, and there is no profiling, no automated decision-making and no
   advertising. If you are in a region with a data-protection authority, you retain the right to
   complain to it.
