@@ -53,7 +53,7 @@
 
 <p class="brand">AVA</p>
 <h1>Privacy Policy</h1>
-<p class="meta">Effective: 20 October 2026</p>
+<p class="meta">Effective: 22 October 2026</p>
 
 <p>
   Ava is a film-emulation camera app for Android, package <code>com.avya.camera</code>,
@@ -66,9 +66,10 @@
   <p>
     <strong>The short version.</strong> Ava has no accounts, no servers and no analytics,
     and it sends nothing off your phone — it does not hold Android's internet permission,
-    so it cannot upload anything. Two things are worth knowing anyway. Every photo and clip is copied into your device's normal photo gallery
-    automatically, so any cloud photo backup you already use will upload that copy the
-    same way it uploads everything else you shoot. And the place name Ava prints under
+    so it cannot upload anything. Two things are worth knowing anyway. Photos and clips stay
+    in Ava unless you choose to copy them to your device's normal photo gallery, and once a
+    copy is there, any cloud photo backup you already use will upload it the same way it
+    uploads everything else you shoot. And the place name Ava prints under
     each photo is part of the film stock's fiction, not a reading of where you are.
   </p>
 </div>
@@ -89,7 +90,7 @@
 </p>
 
 <h2>What Ava stores on your device</h2>
-<p>Ava keeps data in four places inside its own private storage, plus your gallery.</p>
+<p>Ava keeps data in four places inside its own private storage, plus your gallery when you choose to save there.</p>
 <ul>
   <li>
     <strong>Your photos and clips</strong> — the copies your diary shows, as ordinary JPEG
@@ -99,11 +100,11 @@
     <strong>A small database</strong> — one row per photo or clip, holding the file path, the
     film stock's name, the date and time of the photo or clip, its roll and frame number
     (clips carry none), any caption you typed, the film stock's place label, the exposure
-    readout, and a reference to the gallery copy.
+    readout, and a reference to its gallery copy if it has one.
   </li>
   <li>
     <strong>A few settings and flags</strong> — your film stock and its strength, your flash
-    setting and your sounds setting, plus a handful of small markers that remember where you are in the app:
+    setting, your sounds setting and whether the Gallery switch is on, plus a handful of small markers that remember where you are in the app:
     whether you have finished the intro, whether Ava has asked you for the camera or
     microphone and whether you turned it down, whether it has asked you for a rating, and how
     many times you have tapped Share on a photo or clip. All of it is a few
@@ -125,15 +126,28 @@
 
 <h2>The copy in your gallery</h2>
 <p>
-  Every photo and clip Ava keeps is <strong>also copied into your device's shared photo
-  library, automatically, whenever that write succeeds</strong>. There is no setting for
-  this and no way to turn it off.
+  Ava copies a photo or clip into your device's shared photo library <strong>only when you
+  ask it to</strong>. The Gallery switch at the top of the diary is off unless you turn it on.
+  While it is on, every new photo and clip is copied there as it is taken. With it off, you can
+  still copy any single photo or clip with Save in the photo viewer. Turning the switch on or
+  off does not copy or remove anything you have already taken.
+</p>
+<p>
+  Versions of Ava before 2.0.3 tried to copy every photo and clip to the gallery automatically.
+  On Android 9 and earlier that needed the storage permission below, which versions before 2.0
+  never asked for, so some older photos were never copied. Updating stops automatic copies;
+  copies already made stay in your gallery until you delete them. <strong>In the viewer, a photo
+  that shows Save has no copy in your gallery.</strong> The viewer offers Save again for any whose
+  copy you have since deleted, including one waiting in your gallery's trash. On Android 9 and
+  earlier it can tell only while Ava has the storage permission; without it, a photo whose copy
+  you deleted keeps showing Saved. To tell, Ava looks up only the copies it made itself, by their
+  own reference; it does not read the rest of your library.
 </p>
 <p>
   On Android 10 and later the copy goes into a folder named <code>Ava</code> — under Pictures
   for photos, Movies for clips. On Android 9 and earlier Ava does not set a folder, so the
   copy lands wherever your device files it. Each copy is named for the app and the moment it
-  was taken — <code>Ava_</code> followed by the capture time in milliseconds.
+  was taken — <code>Ava_</code> followed by that time in milliseconds (for a clip, when it was saved).
 </p>
 <p>
   That copy is an ordinary picture in your photo library. Any app you have given access to
@@ -144,9 +158,16 @@
 </p>
 <p>
   The copy is best-effort. If your device refuses the write — most often on Android 9 and
-  earlier, when the storage permission below has been declined — Ava keeps the private copy
-  and continues without showing you an error. In that case the photo exists in Ava's diary
-  and not in your gallery.
+  earlier, when the storage permission below has been declined — a photo taken with the
+  switch on stays in Ava's diary without an error, and a Save you tapped tells you it could
+  not be done. Either way the photo exists in Ava's diary and not in your gallery.
+</p>
+<p>
+  <strong>Until a photo or clip has a gallery copy, Ava's diary holds the only copy.</strong>
+  Ava keeps no backup of its own and is excluded from Android's backup and phone-to-phone
+  transfer, so uninstalling Ava, clearing its storage or moving to a new phone loses it.
+  Turning the Gallery switch on copies only what you take from then on; save earlier photos one
+  at a time from the viewer. If an automatic copy fails while the switch is on, Ava says so.
 </p>
 
 <h2>Permissions</h2>
@@ -179,10 +200,14 @@
     </tr>
     <tr>
       <td><strong>Storage</strong><br /><span style="opacity:0.6">Android 9 and below only</span></td>
-      <td>To write the gallery copy on older Android versions. Newer versions need no permission
-          for this. On those older versions Android grants read access along with write, so the
-          same permission would also let Ava read shared storage; Ava has no code that reads or
-          browses your photo library.</td>
+      <td>To write a gallery copy on older Android versions. Asked for when you turn the Gallery
+          switch on (it stays off unless you allow it) or tap Save. If you later take it away in
+          Android's settings, the switch shows off and nothing is copied; Ava asks when it starts,
+          and if you say no the switch turns off so it stops asking. Newer versions need no
+          permission for this. On those older versions Android grants read access along with
+          write, so the same permission would also let Ava read shared storage; Ava uses it only to
+          check that copies it made itself are still there, and never reads or browses the rest of
+          your photo library.</td>
     </tr>
     <tr>
       <td><strong>Network state</strong></td>
@@ -220,8 +245,8 @@
   unless you turn CINE's Sound switch off (in CINE it takes the flash button's place); with it
   off, clips record with no audio and tapping record does not ask for the microphone. The
   switch is not your sounds setting, which only controls Ava's own sound effects, and it is
-  not saved: it goes back to on the next time Ava starts fresh. And clips stop automatically at about fifteen seconds. Recorded audio travels inside the clip, including into the gallery
-  copy described above. If you decline the microphone, CINE still works and records silent.
+  not saved: it goes back to on the next time Ava starts fresh. And clips stop automatically at about fifteen seconds. Recorded audio travels inside the clip, including into a gallery
+  copy if you save one. If you decline the microphone, CINE still works and records silent.
 </p>
 
 <h2>Location, and the place names on your photos</h2>
@@ -252,8 +277,8 @@
 </p>
 <p>
   Each photo also records the date and time it was taken, in your phone's local time, with its
-  offset from UTC, which shows the time zone you were in. These travel with the copy in your
-  gallery and with any photo you share. <strong>No location tag is written.</strong> Clips are
+  offset from UTC, which shows the time zone you were in. These travel with any copy you save
+  to your gallery and with any photo you share. <strong>No location tag is written.</strong> Clips are
   not stamped at all; they carry only what your device's video recorder writes into them,
   which does not include location.
 </p>
@@ -280,8 +305,8 @@
   uninstall.
 </p>
 <p>
-  Deleting a memory deletes Ava's own copy and the copy in your gallery, and then removes the
-  entry from your diary. If Ava cannot delete its own copy, the entry <strong>stays</strong> in
+  Deleting a memory deletes Ava's own copy and, if Ava made one, the copy in your gallery, and
+  then removes the entry from your diary. If Ava cannot delete its own copy, the entry <strong>stays</strong> in
   your diary and Ava tells you so — nothing is stranded somewhere you can no longer see it. If
   it is the gallery copy that will not go, the entry is removed and Ava tells you to delete the
   leftover in your gallery app. There is no delete-everything button; memories are deleted one
@@ -289,9 +314,10 @@
 </p>
 <p>
   Uninstalling Ava, or clearing its storage in Android's settings, removes everything in the
-  four private locations listed above — your diary, its database and its settings. <strong>It
-  does not remove the copies in your gallery</strong>, which are ordinary photos in your
-  library and remain after the app is gone.
+  four private locations listed above — your diary, its database and its settings. Photos and
+  clips you never copied to your gallery exist only there, so they go too. <strong>It does
+  not remove the copies in your gallery</strong>, which are ordinary photos in your library and
+  remain after the app is gone.
 </p>
 
 <h2>How your data is protected</h2>
@@ -344,8 +370,8 @@
   <strong>The developer of Ava never receives any of your data</strong>, so there is nothing
   held to disclose, correct, export or erase. In practice you exercise these rights directly on
   your phone: your photos and captions are files and a database on your own device, you can read
-  and change them in the app, you can copy them out through your gallery or the share sheet, and
-  you can erase them by deleting a memory, which removes both Ava's copy and its gallery copy.
+  and change them in the app, you can copy them out with Save or through the share sheet, and
+  you can erase them by deleting a memory, which removes Ava's copy and any gallery copy it made.
   Uninstalling removes only Ava's own copies; the gallery copies stay, and neither step reaches
   a copy a cloud backup has already uploaded or a file you have shared. Ava does not sell or share
   personal information, and there is no profiling, no automated decision-making and no
