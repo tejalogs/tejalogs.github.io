@@ -71,7 +71,7 @@ tejalogs.github.io
 Drop this into a new repo named exactly **`tejalogs`** (case-sensitive). GitHub renders it as your profile page at github.com/tejalogs.
 
 ```markdown
-### Teja · `@tejalogs`
+### Sai Teja · `@tejalogs`
 
 **AI Content Strategist & Growth Architect** · Founder, [The Social Algorithm](https://www.thesocialalgorithm.work)
 
@@ -87,26 +87,6 @@ Currently building:
 
 📍 Vijayawada, India · [tejalogs.github.io](https://tejalogs.github.io) · [thesocialalgorithm.work](https://www.thesocialalgorithm.work) · [Medium](https://tejalogs.medium.com) · [X](https://x.com/tejalogs)
 ```
-
----
-
-## Wikidata Q140013754 — fields to update
-
-| Property | Value |
-|---|---|
-| `P106` (occupation) | **AI content strategist** + **growth architect** (add both; remove "publisher" if still present) |
-| `P856` (official website) | `https://tejalogs.github.io` |
-| `P1581` (official blog) | `https://tejalogs.medium.com` |
-| `P2003` (Instagram username) | `tejalogs` |
-| `P2002` (Twitter username) | `tejalogs` |
-| `P6634` (LinkedIn personal profile ID) | `tejalogs` |
-| `P2037` (GitHub username) | `tejalogs` |
-| `P2397` (YouTube channel ID) | `@tejalogs` |
-| `P800` (notable work) | The Social Algorithm, Second Look, aajkameal |
-| `P19` (place of birth) or `P551` (residence) | Vijayawada |
-| `P27` (country of citizenship) | India |
-
-Wikidata edits propagate to every Knowledge Graph that pulls from it — Google, Apple, Yandex, plus a chunk of LLM training-data refresh cycles. This is the single highest-leverage 5-minute task on this list.
 
 ---
 

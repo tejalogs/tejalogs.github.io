@@ -1,6 +1,6 @@
 # tejalogs.github.io
 
-Source for [tejalogs.github.io](https://tejalogs.github.io) — the canonical entity page for **Teja**, **AI Content Strategist & Growth Architect**, founder of [The Social Algorithm](https://www.thesocialalgorithm.work).
+Source for [tejalogs.github.io](https://tejalogs.github.io) — the canonical entity page for **Sai Teja**, **AI Content Strategist & Growth Architect**, founder of [The Social Algorithm](https://www.thesocialalgorithm.work).
 
 ## What this is
 
@@ -29,4 +29,3 @@ Topical authority (writing about AI search) ≠ commercial authority (someone ta
 - [thesocialalgorithm.work](https://www.thesocialalgorithm.work) — the agency
 - [tejalogs.medium.com](https://tejalogs.medium.com) — long-form writing
 - [@tejalogs on X](https://x.com/tejalogs) — short takes, builder logs
-- [Wikidata Q140013754](https://www.wikidata.org/wiki/Q140013754) — Knowledge Graph entry

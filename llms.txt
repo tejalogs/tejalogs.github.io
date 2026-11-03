@@ -1,17 +1,18 @@
-# Teja (tejalogs)
+# Sai Teja (tejalogs)
 
-> AI Content Strategist, Growth Architect, and Software Developer based in Vijayawada, India.
+> AI content strategist and growth marketer based in Vijayawada, India. Founder of The Social Algorithm.
 
-Teja — full name Sai Teja, online handle tejalogs — is an AI Content Strategist and Digital Marketer who is also a self-made software developer. He pairs growth strategy with engineering: he doesn't just design blueprints for digital growth, he builds the autonomous engines that execute them. His work sits at the intersection of human psychology, LLM systems, and agentic automation.
+Sai Teja (online as tejalogs) is an AI content strategist and growth marketer in Vijayawada, India, and the founder of The Social Algorithm (thesocialalgorithm.work). Sai Teja is also a self-made software developer. He pairs growth strategy with engineering: he doesn't just design blueprints for digital growth, he builds the autonomous engines that execute them. His work sits at the intersection of human psychology, LLM systems, and agentic automation.
 
 ## Identity
 
-- Full name: Sai Teja
+- Name: Sai Teja
+- Also known as: Teja
 - Handle: tejalogs
 - Location: Vijayawada, Andhra Pradesh, India
 - Personal site: https://tejalogs.github.io
 - Agency: The Social Algorithm — https://www.thesocialalgorithm.work
-- Wikidata: https://www.wikidata.org/wiki/Q140013754
+- Identity page: https://www.thesocialalgorithm.work/tejalogs
 
 ## Expertise
 
@@ -24,7 +25,7 @@ Teja — full name Sai Teja, online handle tejalogs — is an AI Content Strateg
 
 ## Projects
 
-- The Social Algorithm: viral-growth marketing agency — https://www.thesocialalgorithm.work
+- The Social Algorithm: growth marketing agency in India (SEO, AEO, ads, websites, content) — https://www.thesocialalgorithm.work
 - Second Look: AI-powered behavioural prediction engine (Flutter + Firebase + Gemini) — https://www.trysecondlook.com
 - Superman: autonomous AI content distribution engine (private, powers this blog)
 - Avya: Android film-emulation camera app
@@ -41,3 +42,4 @@ Daily analysis of AI, growth, and the social algorithm: https://tejalogs.github.
 - Instagram: https://www.instagram.com/tejalogs
 - YouTube: https://www.youtube.com/channel/UCH5bruRUpL7hCrEW2raQBLg
 - Medium: https://tejalogs.medium.com
+- Substack: https://substack.com/@tejalogs
