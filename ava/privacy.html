@@ -53,7 +53,7 @@
 
 <p class="brand">AVA</p>
 <h1>Privacy Policy</h1>
-<p class="meta">Effective: 22 October 2026</p>
+<p class="meta">Effective: 6 November 2026</p>
 
 <p>
   Ava is a film-emulation camera app for Android, package <code>com.avya.camera</code>,
@@ -85,8 +85,9 @@
   added by one of the Android camera libraries it is built on; Google Play will show it in the
   app's permission list. The image library that displays your diary uses it to check whether
   the device is online. It reads a yes-or-no answer and sends nothing, and without the internet
-  permission it could not send anything if it tried. Separately, tapping the privacy link inside
-  the app opens this page in your browser — your browser then makes that request, not Ava.
+  permission it could not send anything if it tried. Separately, tapping a link inside the app —
+  this page, or a source or licence on the Credits page at the foot of the diary — opens it in
+  your browser; your browser then makes that request, not Ava.
 </p>
 
 <h2>What Ava stores on your device</h2>
@@ -104,10 +105,12 @@
   </li>
   <li>
     <strong>A few settings and flags</strong> — your film stock and its strength, your flash
-    setting, your sounds setting and whether the Gallery switch is on, plus a handful of small markers that remember where you are in the app:
-    whether you have finished the intro, whether Ava has asked you for the camera or
-    microphone and whether you turned it down, whether it has asked you for a rating, and how
-    many times you have tapped Share on a photo or clip. All of it is a few
+    setting, your sounds setting, whether the Gallery switch is on, and whether the Mist filter
+    is on, kept separately for the back and the selfie camera, plus a handful of small markers
+    that remember where you are in the app: whether you have finished the intro, whether Ava has
+    asked you for the camera or microphone and whether you turned it down, whether it has asked
+    about keeping gallery copies, whether it has shown its dim-light tip, whether it has asked
+    you for a rating, and how many times you have tapped Share on a photo or clip. All of it is a few
     dozen bytes, none of it identifies you, and none of it leaves the phone.
   </li>
   <li>
@@ -128,7 +131,12 @@
 <p>
   Ava copies a photo or clip into your device's shared photo library <strong>only when you
   ask it to</strong>. The Gallery switch at the top of the diary is off unless you turn it on.
-  While it is on, every new photo and clip is copied there as it is taken. With it off, you can
+  The first time you take a photo while the switch is off, Ava asks once whether to keep a copy
+  of every photo. Keep copies turns the switch on and also copies the photo the question is
+  showing; Not now leaves the switch off, and Ava does not ask again. If you go back without
+  answering, it asks again after your next photo. On Android 9 and earlier, Keep copies first asks
+  for the storage permission below: the photo is copied only if you allow it, and if you decline,
+  the switch goes back off and nothing is copied. While it is on, every new photo and clip is copied there as it is taken. With it off, you can
   still copy any single photo or clip with Save in the photo viewer. Turning the switch on or
   off does not copy or remove anything you have already taken.
 </p>
@@ -147,7 +155,7 @@
   On Android 10 and later the copy goes into a folder named <code>Ava</code> — under Pictures
   for photos, Movies for clips. On Android 9 and earlier Ava does not set a folder, so the
   copy lands wherever your device files it. Each copy is named for the app and the moment it
-  was taken — <code>Ava_</code> followed by that time in milliseconds (for a clip, when it was saved).
+  was taken — <code>Ava_</code> followed by that time in milliseconds (for a clip, the moment it started recording).
 </p>
 <p>
   That copy is an ordinary picture in your photo library. Any app you have given access to
@@ -201,7 +209,8 @@
     <tr>
       <td><strong>Storage</strong><br /><span style="opacity:0.6">Android 9 and below only</span></td>
       <td>To write a gallery copy on older Android versions. Asked for when you turn the Gallery
-          switch on (it stays off unless you allow it) or tap Save. If you later take it away in
+          switch on, when you tap Keep copies on Ava's one-time gallery question,
+          or when you tap Save; if you say no, the switch stays off and nothing is copied. If you later take it away in
           Android's settings, the switch shows off and nothing is copied; Ava asks when it starts,
           and if you say no the switch turns off so it stops asking. Newer versions need no
           permission for this. On those older versions Android grants read access along with
@@ -272,15 +281,20 @@
   35mm-equivalent, and a lens name. Where your phone's camera reports them, the f-number,
   sensitivity, exposure time and actual focal length are copied from the camera's own record of
   the shot, and the APEX value and lens name are worked out from that f-number. Everything else
-  comes from the on-screen readout, and some of those figures are characteristics of the film
-  stock rather than measurements of the scene.
+  comes from the readout Ava saves with the photo and shows under it in the viewer, and some of those figures are characteristics of the film
+  stock rather than measurements of the scene. If the Mist filter was on, Ava also writes the
+  word <code>Mist</code> into the photo's comment field, so you can tell later which photos were
+  taken through it. Mist starts on for the selfie camera and off for the back camera, so selfies
+  carry this word unless you turn Mist off.
 </p>
 <p>
   Each photo also records the date and time it was taken, in your phone's local time, with its
   offset from UTC, which shows the time zone you were in. These travel with any copy you save
   to your gallery and with any photo you share. <strong>No location tag is written.</strong> Clips are
-  not stamped at all; they carry only what your device's video recorder writes into them,
-  which does not include location.
+  not stamped with any of this. They carry what your device's video recorder writes into them,
+  which does not include location, and Ava changes one thing afterwards: the tag that says which
+  way up the clip plays, so a clip shot sideways plays the right way up. The picture and sound
+  are copied as they are.
 </p>
 
 <h2>Sharing</h2>
@@ -359,6 +373,21 @@
   that purpose and are not stored. The camera library Ava is built on also checks your phone's
   make and model against its own list of known hardware quirks. None of these are identifiers:
   Ava reads no device ID, no advertising ID, and no hardware serial number of any kind.
+</p>
+<p>
+  While Ava is on your screen (the camera, the diary or any of its other pages), it reads your
+  phone's motion sensor to tell which way up you are holding it, so a photo or clip taken sideways
+  is saved the right way up even with auto-rotate off. This needs no permission; the reading stays
+  in memory, is used only to set which way up a photo or clip is saved, and is never stored. It
+  stops when Ava goes to the background.
+</p>
+<p>
+  On the selfie camera, when there is plenty of light, Ava asks the camera to use its own face
+  detection to set the exposure, so a face against a bright window is not left dark. The camera
+  does the detecting, and while it does, it also reports where it found a face with each frame.
+  Ava ignores that report: it does not read, analyse or store any face, recognises no one, and
+  writes nothing about a face into your photos. A tap on the viewfinder meters where you tapped
+  instead.
 </p>
 
 <h2>Your rights</h2>
